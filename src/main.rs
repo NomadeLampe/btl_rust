@@ -4,7 +4,8 @@ fn main() {
     //    pattern_matching();
     //    if_else();
     //    boucle();
-    exemple_fonctions();
+    //    exemple_fonctions();
+    utilisation_lib_externe();
 }
 
 
@@ -103,6 +104,14 @@ fn addition_long(nb1: i32, nb2: i32) -> i32 {
     return nb1 + nb2;
 }
 
+fn methode_sans_retour() {
+    println!("Je ne fais rien")
+}
+
+fn methode_comme_java_void() -> () {
+    println!("Comme java void")
+}
+
 fn exemple_fonctions() {
     let res_a = addition_court(1, 2);
     let res_b = addition_long(1, 2);
@@ -110,4 +119,15 @@ fn exemple_fonctions() {
     println!("Résultat des additions : ");
     println!("addition_court -> {}", res_a);
     println!("addition_long -> {}", res_b);
+
+    methode_sans_retour();
+    methode_comme_java_void();
 }
+
+
+extern crate time;
+
+fn utilisation_lib_externe() {
+    println!("Il est {:?}h{:?}m depuis la lib externe Time", time::now().tm_hour, time::now().tm_min);
+}
+

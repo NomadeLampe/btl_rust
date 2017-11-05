@@ -131,3 +131,7 @@ fn utilisation_lib_externe() {
     println!("Il est {:?}h{:?}m depuis la lib externe Time", time::now().tm_hour, time::now().tm_min);
 }
 
+///
+/// Un ressource ne peut avoir que un seul owner (propriétaire)
+///
+fn ownership() {}
